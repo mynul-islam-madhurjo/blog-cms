@@ -14,7 +14,6 @@
     <include_path>
       <path value="$PROJECT_DIR$/blog-backend/vendor/symfony/polyfill-intl-normalizer" />
       <path value="$PROJECT_DIR$/blog-backend/vendor/symfony/polyfill-intl-idn" />
-      <path value="$PROJECT_DIR$/blog-backend/vendor/symfony/polyfill-iconv" />
       <path value="$PROJECT_DIR$/blog-backend/vendor/symfony/polyfill-ctype" />
       <path value="$PROJECT_DIR$/blog-backend/vendor/symfony/polyfill-intl-grapheme" />
       <path value="$PROJECT_DIR$/blog-backend/vendor/symfony/http-kernel" />
@@ -39,7 +38,6 @@
       <path value="$PROJECT_DIR$/blog-backend/vendor/monolog/monolog" />
       <path value="$PROJECT_DIR$/blog-backend/vendor/composer" />
       <path value="$PROJECT_DIR$/blog-backend/vendor/laravel/framework" />
-      <path value="$PROJECT_DIR$/blog-backend/vendor/swiftmailer/swiftmailer" />
       <path value="$PROJECT_DIR$/blog-backend/vendor/egulias/email-validator" />
       <path value="$PROJECT_DIR$/blog-backend/vendor/nunomaduro/collision" />
       <path value="$PROJECT_DIR$/blog-backend/vendor/tijsverkoyen/css-to-inline-styles" />
@@ -49,7 +47,6 @@
       <path value="$PROJECT_DIR$/blog-backend/vendor/mockery/mockery" />
       <path value="$PROJECT_DIR$/blog-backend/vendor/graham-campbell/result-type" />
       <path value="$PROJECT_DIR$/blog-backend/vendor/guzzlehttp/guzzle" />
-      <path value="$PROJECT_DIR$/blog-backend/vendor/fzaninotto/faker" />
       <path value="$PROJECT_DIR$/blog-backend/vendor/nesbot/carbon" />
       <path value="$PROJECT_DIR$/blog-backend/vendor/league/mime-type-detection" />
       <path value="$PROJECT_DIR$/blog-backend/vendor/ramsey/uuid" />
@@ -66,11 +63,7 @@
       <path value="$PROJECT_DIR$/blog-backend/vendor/league/config" />
       <path value="$PROJECT_DIR$/blog-backend/vendor/league/flysystem" />
       <path value="$PROJECT_DIR$/blog-backend/vendor/sebastian/recursion-context" />
-      <path value="$PROJECT_DIR$/blog-backend/vendor/sebastian/resource-operations" />
-      <path value="$PROJECT_DIR$/blog-backend/vendor/facade/ignition" />
-      <path value="$PROJECT_DIR$/blog-backend/vendor/facade/ignition-contracts" />
       <path value="$PROJECT_DIR$/blog-backend/vendor/league/commonmark" />
-      <path value="$PROJECT_DIR$/blog-backend/vendor/facade/flare-client-php" />
       <path value="$PROJECT_DIR$/blog-backend/vendor/sebastian/diff" />
       <path value="$PROJECT_DIR$/blog-backend/vendor/sebastian/exporter" />
       <path value="$PROJECT_DIR$/blog-backend/vendor/sebastian/environment" />
@@ -87,15 +80,11 @@
       <path value="$PROJECT_DIR$/blog-backend/vendor/sebastian/cli-parser" />
       <path value="$PROJECT_DIR$/blog-backend/vendor/ralouphie/getallheaders" />
       <path value="$PROJECT_DIR$/blog-backend/vendor/psr/simple-cache" />
-      <path value="$PROJECT_DIR$/blog-backend/vendor/fideloper/proxy" />
       <path value="$PROJECT_DIR$/blog-backend/vendor/psr/log" />
       <path value="$PROJECT_DIR$/blog-backend/vendor/hamcrest/hamcrest-php" />
       <path value="$PROJECT_DIR$/blog-backend/vendor/psy/psysh" />
-      <path value="$PROJECT_DIR$/blog-backend/vendor/fruitcake/laravel-cors" />
-      <path value="$PROJECT_DIR$/blog-backend/vendor/opis/closure" />
       <path value="$PROJECT_DIR$/blog-backend/vendor/filp/whoops" />
       <path value="$PROJECT_DIR$/blog-backend/vendor/phpoption/phpoption" />
-      <path value="$PROJECT_DIR$/blog-backend/vendor/asm89/stack-cors" />
       <path value="$PROJECT_DIR$/blog-backend/vendor/voku/portable-ascii" />
       <path value="$PROJECT_DIR$/blog-backend/vendor/psr/event-dispatcher" />
       <path value="$PROJECT_DIR$/blog-backend/vendor/psr/container" />
@@ -103,7 +92,6 @@
       <path value="$PROJECT_DIR$/blog-backend/vendor/psr/http-client" />
       <path value="$PROJECT_DIR$/blog-backend/vendor/psr/http-message" />
       <path value="$PROJECT_DIR$/blog-backend/vendor/doctrine/lexer" />
-      <path value="$PROJECT_DIR$/blog-backend/vendor/doctrine/instantiator" />
       <path value="$PROJECT_DIR$/blog-backend/vendor/doctrine/inflector" />
       <path value="$PROJECT_DIR$/blog-backend/vendor/theseer/tokenizer" />
       <path value="$PROJECT_DIR$/blog-backend/vendor/symfony/translation-contracts" />
@@ -112,15 +100,29 @@
       <path value="$PROJECT_DIR$/blog-backend/vendor/symfony/routing" />
       <path value="$PROJECT_DIR$/blog-backend/vendor/symfony/service-contracts" />
       <path value="$PROJECT_DIR$/blog-backend/vendor/symfony/string" />
-      <path value="$PROJECT_DIR$/blog-backend/vendor/symfony/polyfill-php73" />
-      <path value="$PROJECT_DIR$/blog-backend/vendor/symfony/polyfill-php81" />
       <path value="$PROJECT_DIR$/blog-backend/vendor/symfony/polyfill-php80" />
       <path value="$PROJECT_DIR$/blog-backend/vendor/symfony/process" />
       <path value="$PROJECT_DIR$/blog-backend/vendor/symfony/polyfill-php72" />
       <path value="$PROJECT_DIR$/blog-backend/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/blog-backend/vendor/fruitcake/php-cors" />
+      <path value="$PROJECT_DIR$/blog-backend/vendor/laravel/sanctum" />
+      <path value="$PROJECT_DIR$/blog-backend/vendor/symfony/mailer" />
+      <path value="$PROJECT_DIR$/blog-backend/vendor/symfony/polyfill-uuid" />
+      <path value="$PROJECT_DIR$/blog-backend/vendor/symfony/uid" />
+      <path value="$PROJECT_DIR$/blog-backend/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/blog-backend/vendor/laravel/pint" />
+      <path value="$PROJECT_DIR$/blog-backend/vendor/laravel/sail" />
+      <path value="$PROJECT_DIR$/blog-backend/vendor/fakerphp/faker" />
+      <path value="$PROJECT_DIR$/blog-backend/vendor/guzzlehttp/uri-template" />
+      <path value="$PROJECT_DIR$/blog-backend/vendor/spatie/flare-client-php" />
+      <path value="$PROJECT_DIR$/blog-backend/vendor/spatie/ignition" />
+      <path value="$PROJECT_DIR$/blog-backend/vendor/spatie/backtrace" />
+      <path value="$PROJECT_DIR$/blog-backend/vendor/spatie/laravel-ignition" />
+      <path value="$PROJECT_DIR$/blog-backend/vendor/nunomaduro/termwind" />
+      <path value="$PROJECT_DIR$/blog-backend/vendor/league/flysystem-local" />
     </include_path>
   </component>
-  <component name="PhpProjectSharedConfiguration" php_language_level="7.3" />
+  <component name="PhpProjectSharedConfiguration" php_language_level="8.1" />
   <component name="PhpStanOptionsConfiguration">
     <option name="transferred" value="true" />
   </component>
