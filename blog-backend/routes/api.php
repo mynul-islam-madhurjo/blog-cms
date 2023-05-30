@@ -22,7 +22,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
-Route::post('/logout', [AuthController::class, 'logout']);
 
-Route::post('/blogs', [BlogController::class, 'create']);
+Route::middleware('auth:api')->group(function (){
+    Route::post('/logout', [AuthController::class, 'logout']);
+
+    //For blog management
+    Route::post('/blogs', [BlogController::class, 'create']);
+    Route::get('/posts', [BlogController::class, 'index']);
+});
+
 

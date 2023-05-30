@@ -59,6 +59,7 @@ class AuthController extends Controller
         if(Auth::attempt($credentials)){
 
             $user = Auth::user();
+
             $data['id'] = $user->id;
             $data['email'] = $user->email;
             $data['access_token'] = $user->createToken('accessToken')->accessToken;
