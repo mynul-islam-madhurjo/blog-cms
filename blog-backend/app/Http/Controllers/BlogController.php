@@ -83,7 +83,7 @@ class BlogController extends Controller
         $user = auth()->user();
 
         // Checking if the user has already liked the blog post
-        $like = Like::where('user_id', $user->id)->where('post_id', $blogId)->first();
+        $like = Like::where('user_id', $user->id)->where('blog_id', $blogId)->first();
 
         if ($like) {
             // If user has already liked the post, so unlike it
@@ -96,7 +96,7 @@ class BlogController extends Controller
         // User has not liked the post, so create a new like
         $like = new Like();
         $like->user_id = $user->id;
-        $like->post_id = $blogId;
+        $like->blog_id = $blogId;
         $like->save();
 
         // Increment the likes_count in the blogs table
@@ -106,7 +106,7 @@ class BlogController extends Controller
     }
     public function getLikesCount($blogId)
     {
-        $likesCount = Like::where('post_id', $blogId)->count();
+        $likesCount = Like::where('blog_id', $blogId)->count();
 
         return response()->json(['likes_count' => $likesCount], 200);
     }
