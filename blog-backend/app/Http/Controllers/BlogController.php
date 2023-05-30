@@ -86,7 +86,7 @@ class BlogController extends Controller
     }
     public function getLikesCount($blogId)
     {
-        $likesCount = Like::where('blog_id', $blogId)->count();
+        $likesCount = Like::where('post_id', $blogId)->count();
 
         return response()->json(['likes_count' => $likesCount], 200);
     }
