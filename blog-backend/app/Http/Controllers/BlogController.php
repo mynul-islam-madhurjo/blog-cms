@@ -53,9 +53,29 @@ class BlogController extends Controller
 
         $perPage = $request->query('per_page', 10);
 
-        $blogs = Blog::orderBy('created_at', 'desc')->paginate($perPage);
+        // Loading the related user model
+        $blogs = Blog::with('user')
+        ->orderBy('created_at', 'desc')
+            ->paginate($perPage);
 
-        return response()->json($blogs);
+        // Transform the response to include the user's name
+        $transformedBlogs = $blogs->map(function ($blog) {
+            return [
+                'id' => $blog->id,
+                'user_id' => $blog->user_id,
+                'user_name' => $blog->user->name, // Include the user's name
+                'title' => $blog->title,
+                'post' => $blog->post,
+                'image' => $blog->image,
+                'likes_count' => $blog->likes_count,
+                'dislikes_count' => $blog->dislikes_count,
+                'comments_count' => $blog->comments_count,
+                'created_at' => $blog->created_at,
+                'updated_at' => $blog->updated_at,
+            ];
+        });
+
+        return response()->json($transformedBlogs);
     }
 
     public function like(Request $request, $blogId)
