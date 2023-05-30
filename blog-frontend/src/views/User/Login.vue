@@ -51,7 +51,7 @@ export default {
   },
   computed: {
     ...mapState(['userId']),
-  },
+  },  
   methods: {
 
     ...mapActions(['updateUserId']),
@@ -64,7 +64,7 @@ export default {
           const userId = response.data.data.id;
           console.log(userId);
           this.updateUserId(userId);
-          localStorage.setItem('access_token', response.data.data.access_token)
+          localStorage.setItem('access_ token', response.data.data.access_token)
           this.$router.push('/');
           // alert('In Home Page');
         })

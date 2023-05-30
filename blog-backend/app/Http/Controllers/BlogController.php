@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
+use App\Models\Like;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
@@ -53,4 +54,33 @@ class BlogController extends Controller
 
         return response()->json($blogs);
     }
+
+    public function like(Request $request, $blogId)
+    {
+        $user = auth()->user();
+
+        // Checking if the user has already liked the blog post
+        $like = Like::where('user_id', $user->id)->where('blog_id', $blogId)->first();
+
+        if ($like) {
+            // If user has already liked the post, so unlike it
+            $like->delete();
+            return response()->json(['message' => 'Post unliked successfully'], 200);
+        }
+
+        // User has not liked the post, so create a new like
+        $like = new Like();
+        $like->user_id = $user->id;
+        $like->blog_id = $blogId;
+        $like->save();
+
+        return response()->json(['message' => 'Post liked successfully'], 200);
+    }
+    public function getLikesCount($blogId)
+    {
+        $likesCount = Like::where('blog_id', $blogId)->count();
+
+        return response()->json(['likes_count' => $likesCount], 200);
+    }
+
 }

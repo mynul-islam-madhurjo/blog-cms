@@ -29,6 +29,10 @@ Route::middleware('auth:api')->group(function (){
     //For blog management
     Route::post('/blogs', [BlogController::class, 'create']);
     Route::get('/posts', [BlogController::class, 'index']);
+
+    //For managing Likes in the posts
+    Route::post('/blogs/{blogId}/like', [BlogController::class, 'like']);
+    Route::get('/blogs/{blogId}/likes_count', [BlogController::class, 'getLikesCount']);
 });
 
 
