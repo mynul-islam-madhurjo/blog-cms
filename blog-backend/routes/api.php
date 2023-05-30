@@ -28,7 +28,7 @@ Route::middleware('auth:api')->group(function (){
 
     //For blog management
     Route::post('/blogs', [BlogController::class, 'create']);
-    Route::get('/posts', [BlogController::class, 'index']);
+    Route::get('/blogs/list', [BlogController::class, 'index']);
 
     //For managing Likes in the posts
     Route::post('/blogs/{blogId}/like', [BlogController::class, 'like']);
@@ -36,7 +36,7 @@ Route::middleware('auth:api')->group(function (){
 
     //For Managing Comments in the posts
     Route::post('/posts/{blogId}/comment', [BlogController::class, 'comment']);
-    Route::get('/posts/{blogId}/comments', [BlogController::class, 'getComments']);
+    Route::get('/posts/{blogId}/comments_count', [BlogController::class, 'getComments']);
 });
 
 

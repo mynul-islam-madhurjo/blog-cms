@@ -7,6 +7,7 @@ use App\Models\Comment;
 use App\Models\Like;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 
 class BlogController extends Controller
@@ -48,7 +49,7 @@ class BlogController extends Controller
 
     public function index(Request $request)
     {
-        // I am using the default number 10 number os posts per page
+        // I am using the default number 10 as posts per page
 
         $perPage = $request->query('per_page', 10);
 
@@ -62,19 +63,24 @@ class BlogController extends Controller
         $user = auth()->user();
 
         // Checking if the user has already liked the blog post
-        $like = Like::where('user_id', $user->id)->where('blog_id', $blogId)->first();
+        $like = Like::where('user_id', $user->id)->where('post_id', $blogId)->first();
 
         if ($like) {
             // If user has already liked the post, so unlike it
             $like->delete();
+            // Decrement the likes_count in the blogs table
+            Blog::where('id', $blogId)->decrement('likes_count');
             return response()->json(['message' => 'Post unliked successfully'], 200);
         }
 
         // User has not liked the post, so create a new like
         $like = new Like();
         $like->user_id = $user->id;
-        $like->blog_id = $blogId;
+        $like->post_id = $blogId;
         $like->save();
+
+        // Increment the likes_count in the blogs table
+        Blog::where('id', $blogId)->increment('likes_count');
 
         return response()->json(['message' => 'Post liked successfully'], 200);
     }
