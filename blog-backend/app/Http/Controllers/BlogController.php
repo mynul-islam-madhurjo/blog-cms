@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
+use App\Models\Comment;
 use App\Models\Like;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -81,6 +82,30 @@ class BlogController extends Controller
         $likesCount = Like::where('blog_id', $blogId)->count();
 
         return response()->json(['likes_count' => $likesCount], 200);
+    }
+
+    public function comment(Request $request, $blogId)
+    {
+        $user = auth()->user();
+
+        $validatedData = $request->validate([
+            'content' => 'required',
+        ]);
+
+        $comment = new Comment();
+        $comment->user_id = $user->id;
+        $comment->blog_id = $blogId;
+        $comment->content = $validatedData['content'];
+        $comment->save();
+
+        return response()->json(['message' => 'Comment added successfully'], 201);
+    }
+
+    public function getComments($blogId)
+    {
+        $comments = Comment::where('blog_id', $blogId)->get();
+
+        return response()->json($comments);
     }
 
 }
