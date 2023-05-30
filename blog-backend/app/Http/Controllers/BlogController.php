@@ -35,11 +35,12 @@ class BlogController extends Controller
             $imagePath = null;
         }
 
+
         $blog = new Blog();
         $blog->title = $request->title;
         $blog->post = $request->post;
-        $blog->user_id = $request->user_id;
-        $blog->image = $request->$imagePath;
+        $blog->user_id = Auth::user()->id;
+        $blog->image = $imagePath;
         $blog->save();
 
         return response()->json(['message' => 'Blog post created successfully'], 201);
