@@ -105,6 +105,9 @@ class BlogController extends Controller
         $comment->content = $validatedData['content'];
         $comment->save();
 
+        // Increment the comments count in the blogs table
+        Blog::where('id', $blogId)->increment('comments_count');
+
         return response()->json(['message' => 'Comment added successfully'], 201);
     }
 

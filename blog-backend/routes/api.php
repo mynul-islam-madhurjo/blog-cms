@@ -36,7 +36,7 @@ Route::middleware('auth:api')->group(function (){
 
     //For Managing Comments in the posts
     Route::post('/posts/{blogId}/comment', [BlogController::class, 'comment']);
-    Route::get('/posts/{blogId}/comments_count', [BlogController::class, 'getComments']);
+    Route::get('/posts/{blogId}/comments_list', [BlogController::class, 'getComments']);
 });
 
 
