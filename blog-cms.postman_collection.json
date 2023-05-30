@@ -1,0 +1,279 @@
+{
+	"info": {
+		"_postman_id": "76c074b6-b4f4-4257-87b4-86f3f3693beb",
+		"name": "blog-cms",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25455128"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:8000/api/blogs/list",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZTJhMzUzMWNiMjY3MTgzYTMyNjFiY2I0OWY3OGQ3NzFkMjhiZGJjMmE4NTIyMzIyMTYxY2MxNjhmOGRjOThlZGJmMzA1Y2FmZDkwMGY4ZWEiLCJpYXQiOjE2ODU0Mjk5ODQuOTMxNzk0LCJuYmYiOjE2ODU0Mjk5ODQuOTMxNzk3LCJleHAiOjE3MTcwNTIzODQuOTI0MjQ3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.CrV5jz-xTIVwo6ftJkNuTRJRlERYHwsUscsaV0kcTNDaBGBfLwWTnmvloz7qF52mSKj6EuqD6XKz9EP8aN0fNUhyfNgPljzXmheqY8WrqqSSkEhYXDDZ6iYrf6JmnoWEzhOw48UWNtJAQOysUmloCN79tQBwFxArPXdLqrwPRMPSCvWMKgUBbL9kKMkjZR4hCHvzkQvNjgYL4vAm6P2IvGtT1LDEIy0lkJgkf6te6RvkuV2JvMEOeZGdUoCiE3QoxkQRmGrwK2drt0iQqGJebe-qVnlEO_lboar0rATjS_2enRoInvs33-aPHrl7vUSQyeon5oTcUddIzqpqrlb4TDm6BBGDV4PjHEm2cSQkk9k4gMJfke8La4bL1-pN126JkovzLLXrTQYWQzC9shoyhn2brCqbhHjF_962DPLja7yMlvtoLRQkAMETwFW7oHCyttHcQTn3ORQehAlF3tp8OlkSsQ8A4B2W5yArVJtb_LthepLBM_xXSFKh0WqXg6Negp_33kC2awl70fGZ0U2CFLWwISEk8BVATwIhBvxZlTzssR-YO7VTg1n4Q0haQbGLAeJHcBo-oS3hewdd-FjXwiPx0VY-5RMiwNwXBn-2s-WxPzm7fTLsDDKrfm6Oc5BBt57OWd0eZK476KhQsb0G4Q5drUTGWhmSFRaE-u9RoOM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/blogs/list",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"blogs",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/blogs/",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZTJhMzUzMWNiMjY3MTgzYTMyNjFiY2I0OWY3OGQ3NzFkMjhiZGJjMmE4NTIyMzIyMTYxY2MxNjhmOGRjOThlZGJmMzA1Y2FmZDkwMGY4ZWEiLCJpYXQiOjE2ODU0Mjk5ODQuOTMxNzk0LCJuYmYiOjE2ODU0Mjk5ODQuOTMxNzk3LCJleHAiOjE3MTcwNTIzODQuOTI0MjQ3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.CrV5jz-xTIVwo6ftJkNuTRJRlERYHwsUscsaV0kcTNDaBGBfLwWTnmvloz7qF52mSKj6EuqD6XKz9EP8aN0fNUhyfNgPljzXmheqY8WrqqSSkEhYXDDZ6iYrf6JmnoWEzhOw48UWNtJAQOysUmloCN79tQBwFxArPXdLqrwPRMPSCvWMKgUBbL9kKMkjZR4hCHvzkQvNjgYL4vAm6P2IvGtT1LDEIy0lkJgkf6te6RvkuV2JvMEOeZGdUoCiE3QoxkQRmGrwK2drt0iQqGJebe-qVnlEO_lboar0rATjS_2enRoInvs33-aPHrl7vUSQyeon5oTcUddIzqpqrlb4TDm6BBGDV4PjHEm2cSQkk9k4gMJfke8La4bL1-pN126JkovzLLXrTQYWQzC9shoyhn2brCqbhHjF_962DPLja7yMlvtoLRQkAMETwFW7oHCyttHcQTn3ORQehAlF3tp8OlkSsQ8A4B2W5yArVJtb_LthepLBM_xXSFKh0WqXg6Negp_33kC2awl70fGZ0U2CFLWwISEk8BVATwIhBvxZlTzssR-YO7VTg1n4Q0haQbGLAeJHcBo-oS3hewdd-FjXwiPx0VY-5RMiwNwXBn-2s-WxPzm7fTLsDDKrfm6Oc5BBt57OWd0eZK476KhQsb0G4Q5drUTGWhmSFRaE-u9RoOM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "asadasssadasdasdasda",
+							"type": "text"
+						},
+						{
+							"key": "post",
+							"value": "asdasdasdasdlaaaaaaaaaaaaaaaaaaaaaaasasssssssssssssssssssssssssss",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/Daraz/Downloads/2355cd02b42ca6ea2dedf59c5af36e67.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/blogs/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"blogs",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/blogs/1/like",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNmJiMDdjMzIyMjA2MDBhOGZmODA1NzQ1NzAxNWUyOTIwNjQ5ZGI4NmYyOGQyYzYyN2FiYmU4MmNkYWRlY2VhZmU3M2YzZDAyMWRlZjQ1YzUiLCJpYXQiOjE2ODU0MzU1NDAuMzM0NDMzLCJuYmYiOjE2ODU0MzU1NDAuMzM0NDM1LCJleHAiOjE3MTcwNTc5NDAuMzIwODc5LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.0PfqXZHWMJjnmFmpaK9SS2wgiceHxNuzDuAEo-WtzdJbff_ub9bN1C-gwSQDJk3K1I2yayxXFIc7ZbDCx14suRT6iBSo83_Zem3lr6qBuSzzM8FFaY1NFIJfJn_7SUkr6OfRlAVU5Fz3fMD03GM_7r1y0oooa3R3V1YtzAjSt1dp0R8hfY5DV8UIN0tdvclcOn4xjOuihPSmGWPpQ6x4E3B9d-NxDznn-4Oas4SEssIGK0Zt1kFHUHN5x1NlE-G35qCKo_ICLn9YLchelp2Rj-FHiwfpfwHOPTgkv-ab_WgzTWhonsmdZgKqaHqNkeI0rDMQLTdrPTYYY62OAev5DK_6m196lGl7hSU_7vW-Lb4TpEha0tJi290l9SMRuaUVAY43SV3vDJIAmYsNKWMgX3SON0Pew70UtNrK5Anv3aMrM6CWm5emR50YBgfOKmOs8YtiUwZVHGbyZQWjRrGiteb_WsXnqkQ60HZD9pwovucbeKuNS90uMFwRccfuhxj9hCCnkQfcSKhZkbLNt6Rsdt1pw8z6u-xMFUMmo2J2o2llQFEPCPBZ-ZPr0HPqXymScNVf2eL-iOK6ZY14hHq-FMldSdv8j-v5i5PWVcqmOdOM_rLKXiE92FIQ9qEqrttmnUecoKeL47cesQyEIIGTilDABsxSz86Ya_ZRRWNSHvI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/blogs/1/like",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"blogs",
+						"1",
+						"like"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/blogs/1/likes_count",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNmJiMDdjMzIyMjA2MDBhOGZmODA1NzQ1NzAxNWUyOTIwNjQ5ZGI4NmYyOGQyYzYyN2FiYmU4MmNkYWRlY2VhZmU3M2YzZDAyMWRlZjQ1YzUiLCJpYXQiOjE2ODU0MzU1NDAuMzM0NDMzLCJuYmYiOjE2ODU0MzU1NDAuMzM0NDM1LCJleHAiOjE3MTcwNTc5NDAuMzIwODc5LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.0PfqXZHWMJjnmFmpaK9SS2wgiceHxNuzDuAEo-WtzdJbff_ub9bN1C-gwSQDJk3K1I2yayxXFIc7ZbDCx14suRT6iBSo83_Zem3lr6qBuSzzM8FFaY1NFIJfJn_7SUkr6OfRlAVU5Fz3fMD03GM_7r1y0oooa3R3V1YtzAjSt1dp0R8hfY5DV8UIN0tdvclcOn4xjOuihPSmGWPpQ6x4E3B9d-NxDznn-4Oas4SEssIGK0Zt1kFHUHN5x1NlE-G35qCKo_ICLn9YLchelp2Rj-FHiwfpfwHOPTgkv-ab_WgzTWhonsmdZgKqaHqNkeI0rDMQLTdrPTYYY62OAev5DK_6m196lGl7hSU_7vW-Lb4TpEha0tJi290l9SMRuaUVAY43SV3vDJIAmYsNKWMgX3SON0Pew70UtNrK5Anv3aMrM6CWm5emR50YBgfOKmOs8YtiUwZVHGbyZQWjRrGiteb_WsXnqkQ60HZD9pwovucbeKuNS90uMFwRccfuhxj9hCCnkQfcSKhZkbLNt6Rsdt1pw8z6u-xMFUMmo2J2o2llQFEPCPBZ-ZPr0HPqXymScNVf2eL-iOK6ZY14hHq-FMldSdv8j-v5i5PWVcqmOdOM_rLKXiE92FIQ9qEqrttmnUecoKeL47cesQyEIIGTilDABsxSz86Ya_ZRRWNSHvI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/blogs/1/likes_count",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"blogs",
+						"1",
+						"likes_count"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/posts/1/comment",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNmJiMDdjMzIyMjA2MDBhOGZmODA1NzQ1NzAxNWUyOTIwNjQ5ZGI4NmYyOGQyYzYyN2FiYmU4MmNkYWRlY2VhZmU3M2YzZDAyMWRlZjQ1YzUiLCJpYXQiOjE2ODU0MzU1NDAuMzM0NDMzLCJuYmYiOjE2ODU0MzU1NDAuMzM0NDM1LCJleHAiOjE3MTcwNTc5NDAuMzIwODc5LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.0PfqXZHWMJjnmFmpaK9SS2wgiceHxNuzDuAEo-WtzdJbff_ub9bN1C-gwSQDJk3K1I2yayxXFIc7ZbDCx14suRT6iBSo83_Zem3lr6qBuSzzM8FFaY1NFIJfJn_7SUkr6OfRlAVU5Fz3fMD03GM_7r1y0oooa3R3V1YtzAjSt1dp0R8hfY5DV8UIN0tdvclcOn4xjOuihPSmGWPpQ6x4E3B9d-NxDznn-4Oas4SEssIGK0Zt1kFHUHN5x1NlE-G35qCKo_ICLn9YLchelp2Rj-FHiwfpfwHOPTgkv-ab_WgzTWhonsmdZgKqaHqNkeI0rDMQLTdrPTYYY62OAev5DK_6m196lGl7hSU_7vW-Lb4TpEha0tJi290l9SMRuaUVAY43SV3vDJIAmYsNKWMgX3SON0Pew70UtNrK5Anv3aMrM6CWm5emR50YBgfOKmOs8YtiUwZVHGbyZQWjRrGiteb_WsXnqkQ60HZD9pwovucbeKuNS90uMFwRccfuhxj9hCCnkQfcSKhZkbLNt6Rsdt1pw8z6u-xMFUMmo2J2o2llQFEPCPBZ-ZPr0HPqXymScNVf2eL-iOK6ZY14hHq-FMldSdv8j-v5i5PWVcqmOdOM_rLKXiE92FIQ9qEqrttmnUecoKeL47cesQyEIIGTilDABsxSz86Ya_ZRRWNSHvI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "content",
+							"value": "very very nice",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/posts/1/comment",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"posts",
+						"1",
+						"comment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/posts/1/comments_list",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNmJiMDdjMzIyMjA2MDBhOGZmODA1NzQ1NzAxNWUyOTIwNjQ5ZGI4NmYyOGQyYzYyN2FiYmU4MmNkYWRlY2VhZmU3M2YzZDAyMWRlZjQ1YzUiLCJpYXQiOjE2ODU0MzU1NDAuMzM0NDMzLCJuYmYiOjE2ODU0MzU1NDAuMzM0NDM1LCJleHAiOjE3MTcwNTc5NDAuMzIwODc5LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.0PfqXZHWMJjnmFmpaK9SS2wgiceHxNuzDuAEo-WtzdJbff_ub9bN1C-gwSQDJk3K1I2yayxXFIc7ZbDCx14suRT6iBSo83_Zem3lr6qBuSzzM8FFaY1NFIJfJn_7SUkr6OfRlAVU5Fz3fMD03GM_7r1y0oooa3R3V1YtzAjSt1dp0R8hfY5DV8UIN0tdvclcOn4xjOuihPSmGWPpQ6x4E3B9d-NxDznn-4Oas4SEssIGK0Zt1kFHUHN5x1NlE-G35qCKo_ICLn9YLchelp2Rj-FHiwfpfwHOPTgkv-ab_WgzTWhonsmdZgKqaHqNkeI0rDMQLTdrPTYYY62OAev5DK_6m196lGl7hSU_7vW-Lb4TpEha0tJi290l9SMRuaUVAY43SV3vDJIAmYsNKWMgX3SON0Pew70UtNrK5Anv3aMrM6CWm5emR50YBgfOKmOs8YtiUwZVHGbyZQWjRrGiteb_WsXnqkQ60HZD9pwovucbeKuNS90uMFwRccfuhxj9hCCnkQfcSKhZkbLNt6Rsdt1pw8z6u-xMFUMmo2J2o2llQFEPCPBZ-ZPr0HPqXymScNVf2eL-iOK6ZY14hHq-FMldSdv8j-v5i5PWVcqmOdOM_rLKXiE92FIQ9qEqrttmnUecoKeL47cesQyEIIGTilDABsxSz86Ya_ZRRWNSHvI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "content",
+							"value": "very very nice",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/posts/1/comments_list",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"posts",
+						"1",
+						"comments_list"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
